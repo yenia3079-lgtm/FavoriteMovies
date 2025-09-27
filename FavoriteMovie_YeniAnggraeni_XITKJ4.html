@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>My Favorite Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: "PT Sans", sans-serif;
+        }
+
+        .mytitle {
+            width: 100%;
+            height: 250px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/1200x/9b/17/fc/9b17fc73cad424ef0bfcec71fdc21639.jpg');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mytitle>button {
+            width: 200px;
+            height: 50px;
+            background-color: transparent;
+            color: white;
+            border-radius: 50px;
+            border: 1px solid white;
+            margin-top: 10px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .mycards {
+            margin: 20px auto 0px auto;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        .mycomment {
+            color: gray
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            background-color: pink;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mybtns {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+
+        }
+
+        .mybtns>button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>My favorite movies</h1>
+        <button>Save a new movie</button>
+    </div>
+
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enter Movie URL">
+            <label for="floatingInput">Movie URL</label>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Stars</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>-- Select a rating --</option>
+                <option value="1"> 0,1⭐️😣</option>
+                <option value="2"> 0,2⭐️⭐️😓</option>
+                <option value="3"> 0,3⭐️⭐️⭐️🫡</option>
+                <option value="4"> 0,4⭐️⭐️⭐️⭐️😋</option>
+                <option value="5"> 0,5⭐️⭐️⭐️⭐️⭐️🤩</option>
+            </select>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Comment</label>
+        </div>
+        <div class="mybtns">
+            <button type="button" class="btn btn-dark">Save</button>
+            <button type="button" class="btn btn-outline-dark">Close</button>
+        </div>
+    </div>
+
+
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/71/e6/1e/71e61e2ab0af3df187b0f4a312094f4e.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">A Bussiness Proposal</h5>
+                        <p> The Genre: Romantic, Comedy, Office Romance, Drama</p>
+                        <p class="card-text">A young office worker goes on a blind date while pretending to be her
+                            friend, only to discover that her date is actually the CEO of the company she works at.
+                            Their relationship unfolds with comedy, romance, and hidden identities.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/be/bd/f3/bebdf334716724752bdc7972f21202f0.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">A shop For Killer</h5>
+                        <p>The Genre: Action, Thriller, Mystery</p>
+                        <p class="card-text">A young girl finds herself targeted by assassins after her uncle's death.
+                            To survive, she must use the skills her uncle taught her as a child.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/0f/ff/da/0fffdac1c4375a25adb74dba5cb2a51b.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Oh My Ghost Client</h5>
+                        <p>The Genre: Fantasy, Legal, Comedy, Supernatural</p>
+                        <p class="card-text">An employment lawyer who, after surviving an accident, begins to see
+                            ghosts. The spirits of workers who died unjustly come to him seeking justice.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/9f/f4/dc/9ff4dceeee2e22326e1d4ca9a54261dd.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Uncany Counter</h5>
+                        <p>The Genre: Fantasy, Action, Thriller, Supernatural</p>
+                        <p class="card-text">A group of demon hunters disguised as workers at a noodle restaurant
+                            possess special powers to fight evil spirits that have escaped from the afterlife and prey
+                            on humans.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/fe/18/e2/fe18e2708cc90911d2b557fa7f841adf.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Resident Playbook</h5>
+                        <p>The Genre: Medical, Slice of Life, Drama</p>
+                        <p class="card-text">A spin-off of Hospital Playlist focusing on the lives of new residents at
+                            Yulje Hospital, showing their struggles with work pressure, friendships, and personal
+                            growth.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/e9/b8/39/e9b839dc5eb1024d7d7dbcbdbfa52853.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Happiness</h5>
+                        <p>The Genre: Thriller, Action, Horror, Drama</p>
+                        <p class="card-text">A mysterious outbreak turns people into zombie-like creatures inside a
+                            locked-down apartment complex. Residents must survive amidst fear, distrust, and chaos.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/4a/77/10/4a771096fb1d9f251926e02ccf4fe664.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">When Life Gives You Tangerines</h5>
+                        <p>The Genre: Romance, Coming-of-Age, Drama</p>
+                        <p class="card-text">Set in Jeju during the 1980s–90s, it follows Ae-soon and Gwan-shik as they
+                            experience love, friendship, and the bittersweet journey of growing up.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/98/2a/0a/982a0a72174351f1744f2582c92dfaec.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Trauma Code</h5>
+                        <p>The Genre: Medical, Drama</p>
+                        <p class="card-text">Tells the story of trauma doctors in the emergency unit who face
+                            life-threatening cases while struggling with emotional and psychological burdens.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/1200x/43/27/36/43273661fb8c2d2ac7790c0e7479af1d.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Moving</h5>
+                        <p>The Genre: Action, Supernatural, Thriller, Drama</p>
+                        <p class="card-text">Children who inherit superpowers from their parents—former secret
+                            agents—must hide their abilities while confronting dangerous enemies.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/1200x/0d/a6/21/0da621fcb53813353d9a0e17a3d16c8a.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">I Am A Running Mate</h5>
+                        <p>The Genre: Youth, School, Drama</p>
+                        <p class="card-text">A high school student unexpectedly becomes a candidate for vice president
+                            of the student council and learns about responsibility, courage, and friendship.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/41/66/f9/4166f9f7e662310dd95ab5c21856f844.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Winning Try</h5>
+                        <p>The Genre: Sports, Youth, Drama</p>
+                        <p class="card-text">Follows rugby players striving to build a strong team while chasing their
+                            dreams, highlighting their passion, struggles, and bonds.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/1200x/cc/3a/08/cc3a087daf101e1e91d77d299c32750f.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Move To Heaven</h5>
+                        <p>The Genre: Slice of Life, Family, Drama</p>
+                        <p class="card-text">A young man with Asperger’s syndrome and his uncle run a “trauma cleaning”
+                            business, delivering the final messages of the deceased to their loved ones.</p>
+                        <p>The Rating: 5,0⭐️⭐️⭐️⭐️⭐️</p>
+                        <p class="mycomment"> This is a fake comment</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- Nama: Yeni Anggraeni
+Kelas: XI TKJ4
+No.Absen: 30 -->
